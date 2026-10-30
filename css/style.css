@@ -1,0 +1,143 @@
+ 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 3rem 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(3.75rem, 1fr) minmax(0, 42rem) minmax(3.75rem, 1fr);
+    grid-template-rows: auto auto auto auto;
+    align-content: center;
+    color: #000;
+    background: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body > h5,
+body > div {
+    animation: page-fade-in 2s ease-in;
+}
+
+#title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+h5 {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 5px;
+    border: 0;
+    opacity: 0.7;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-align: left;
+}
+
+#engdef,
+#simdef,
+#klingdef,
+#espdef,
+#vaydef {
+    grid-column: 2;
+    grid-row: 3;
+    width: 100%;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+#engdef p,
+#simdef p,
+#klingdef p,
+#espdef p,
+#vaydef p {
+    margin: 0.35rem 0;
+}
+
+body > br {
+    display: none;
+}
+
+body > a {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0.35rem;
+    border: 0;
+    color: #000;
+    background: #fff;
+    font-size: 0;
+    text-decoration: none;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+}
+
+body > a:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: end;
+}
+
+body > a:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: start;
+}
+
+body > a:nth-of-type(1)::after {
+    content: "\21D0";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+body > a:nth-of-type(2)::after {
+    content: "\21D2";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+body > a:hover,
+body > a:focus-visible {
+    color: #fff;
+    background: #000;
+    outline: 2px solid #000;
+    outline-offset: 3px;
+}
+
+footer {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    justify-self: center;
+    width: min(100%, 42rem);
+    margin-top: 0;
+    padding-top: 2rem;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
