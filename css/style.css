@@ -60,7 +60,8 @@ h5 {
 #simdef,
 #klingdef,
 #espdef,
-#vaydef {
+#vaydef,
+#vuldef {
     grid-column: 2;
     grid-row: 3;
     width: 100%;
@@ -74,7 +75,8 @@ h5 {
 #simdef p,
 #klingdef p,
 #espdef p,
-#vaydef p {
+#vaydef p.
+#vuldef p. {
     margin: 0.35rem 0;
 }
 
